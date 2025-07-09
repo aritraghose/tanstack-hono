@@ -1,5 +1,5 @@
 {
-  "name": "my-turborepo",
+  "name": "tanstack-hono",
   "private": true,
   "scripts": {
     "build": "turbo run build",
