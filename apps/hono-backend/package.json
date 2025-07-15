@@ -1,9 +1,16 @@
 {
   "name": "hono-backend",
   "scripts": {
-    "dev": "wrangler dev",
+    "dev": "wrangler dev --local",
     "deploy": "wrangler deploy --minify",
-    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings",
+    "drizzle:studio": "drizzle-kit studio",
+    "drizzle:generate": "drizzle-kit generate",
+    "drizzle:migrate": "drizzle-kit migrate",
+    "drizzle:pull": "drizzle-kit pull",
+    "drizzle:push": "drizzle-kit push",
+    "drizzle:studio:local": "drizzle-kit studio --config=drizzle.config.local.ts"
+
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.0.1",
@@ -14,6 +21,7 @@
   },
   "devDependencies": {
     "drizzle-kit": "^0.31.4",
-    "wrangler": "^4.4.0"
+    "tsx": "^4.20.3",
+    "wrangler": "^4.24.3"
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "hono-backend",
   "main": "src/index.ts",
-  "compatibility_date": "2025-07-09"
+  "compatibility_date": "2025-07-09",
   // "compatibility_flags": [
   //   "nodejs_compat"
   // ],
@@ -21,13 +21,14 @@
   //     "bucket_name": "my-bucket"
   //   }
   // ],
-  // "d1_databases": [
-  //   {
-  //     "binding": "MY_DB",
-  //     "database_name": "my-database",
-  //     "database_id": ""
-  //   }
-  // ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "tanstack-hono-d1",
+      "database_id": "4832a35e-1dfe-43ba-85c9-4eafc3e61008",
+      "migrations_dir": "db/migrations"
+    }
+  ]
   // "ai": {
   //   "binding": "AI"
   // },
